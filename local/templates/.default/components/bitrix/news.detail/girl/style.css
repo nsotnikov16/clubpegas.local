@@ -1,0 +1,232 @@
+/* Плеер */
+.adudio__controls {
+    display: flex;
+    gap: 17px;
+    width: fit-content;
+    justify-content: center;
+    margin: auto;
+}
+
+.audio__name {
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.spoiler__top.detail__audio {
+    border-radius: 6px;
+    padding: 17px 26px 29px;
+    margin-top: 40px;
+    display: block;
+    cursor: default;
+}
+
+.video-hud__curr-time {
+    width: 42px;
+}
+
+.video-hud__duration {
+    width: 42px;
+}
+
+.video-container {
+    width: 100%;
+}
+
+.video-player {
+    width: 100%;
+    margin: 0;
+}
+
+.video-hud {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 0fr 1fr 0fr;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.video-hud__action:hover {
+    opacity: 0.6;
+}
+
+.video-hud__progress-bar {
+    height: 5px;
+    width: 100%;
+    margin: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.video-hud__action_play {
+    height: 22px;
+    width: 22px;
+    display: block;
+    cursor: pointer;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.video-hud__action_pause {
+    height: 22px;
+    width: 22px;
+    display: block;
+    cursor: pointer;
+}
+
+.video-hud__action_reset {
+    height: 17px;
+    width: 17px;
+    display: block;
+    cursor: pointer;
+}
+
+.video-hud__mute {
+    width: 30px;
+    border-radius: 100px 100px 100px 100px;
+}
+
+.video-hud__mute_true {
+    background: #c00;
+}
+
+.video-hud__mute_false {
+    background: #ccc;
+}
+
+.interview__container {
+    max-width: 595px;
+    margin: auto;
+    position: relative;
+}
+
+.interview__container p {
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.interview__container p:nth-child(2n) {
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.interview__blur:before {
+    content: "";
+    display: block;
+    height: 80px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.js-hidden.interview__blur>.interview__invisible {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    transition: max-height 0.5s, opacity 0.2s, visibility 0.2s;
+}
+
+.interview__invisible {
+    visibility: visible;
+    opacity: 1;
+    max-height: 2000px;
+    transition: max-height 3s, opacity 1s, visibility 1s;
+}
+
+.interview__more {
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 5px;
+    margin: auto;
+    width: fit-content;
+    display: block;
+}
+
+@media(min-width: 561px) {
+    .section_interview {
+        padding-top: 100px !important;
+    }
+}
+
+.swiper__video {
+    height: 100%;
+    width: 100%;
+}
+
+.poster__icon {
+    position: relative;
+}
+
+.poster__icon svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+}
+
+.video__poster {
+    position: relative;
+}
+
+.video__poster svg {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.video__poster picture {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.video__poster:hover svg {
+    transform: scale(1.2);
+}
+
+.video__hidden {
+    display: none !important;
+}
+
+@media(max-width: 600px) {
+    .poster__icon svg {
+        width: 20px;
+    }
+
+    .spoiler__top.detail__audio {
+        padding: 20px;
+    }
+
+    .video-hud__progress-bar {
+        height: 15px;
+    }
+}

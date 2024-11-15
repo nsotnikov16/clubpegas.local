@@ -1,0 +1,10 @@
+.osp
+/bitrix
+/upload
+*.html
+*.png
+*.jpg
+*.xml
+*.log
+*.txt
+*.ini

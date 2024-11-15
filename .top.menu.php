@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Наши мастера", 
+		"/masters/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Программы", 
+		"/programms/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Акции", 
+		"/promotions/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Салон", 
+		"/salon/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
