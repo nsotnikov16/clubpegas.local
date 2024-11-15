@@ -2616,8 +2616,8 @@ main {
 .programms__socials {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (160px) [3];
-  grid-template-columns: repeat(3, 160px);
+  -ms-grid-columns: (50px) [3];
+  grid-template-columns: repeat(3, 50px);
   gap: 15px;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4433,8 +4433,8 @@ main {
   }
 
   .programms__socials {
-    -ms-grid-columns: (140px) [2];
-    grid-template-columns: repeat(2, 140px);
+    -ms-grid-columns: (45px) [3];
+    grid-template-columns: repeat(3, 45px);
   }
 
   .programms__socials a {
@@ -4931,10 +4931,6 @@ main {
     justify-content: flex-start;
   }
 
-  .programms__socials {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 320px) {

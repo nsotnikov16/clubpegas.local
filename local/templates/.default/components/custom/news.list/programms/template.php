@@ -126,7 +126,6 @@ $this->setFrameMode(true);
 												<svg>
 													<use href="/local/assets/img/icons/icons.svg#whatsapp"></use>
 												</svg>
-												<span>WhatsApp</span>
 											</a>
 										<? endif; ?>
 										<? if ($GLOBALS['SITE_INFO']['TELEGRAM']['VALUE']) : ?>
@@ -134,7 +133,6 @@ $this->setFrameMode(true);
 												<svg>
 													<use href="/local/assets/img/icons/icons.svg#telegram"></use>
 												</svg>
-												<span>Telegram</span>
 											</a>
 										<? endif; ?>
 										<? if ($GLOBALS['SITE_INFO']['VIBER']['VALUE']) : ?>
@@ -142,13 +140,12 @@ $this->setFrameMode(true);
 												<svg>
 													<use href="/local/assets/img/icons/icons.svg#viber"></use>
 												</svg>
-												<span>Viber</span>
 											</a>
 										<? endif; ?>
 
 
 									</div>
-									<a class="programms__more-link" href="<?= $arItem['DETAIL_PAGE_URL'] ?>">Программа эротического массажа</a>
+									<a class="programms__more-link" href="<?= $arItem['DETAIL_PAGE_URL'] ?>"><?= $arItem['PROPERTIES']['TEXT_DETAIL_BTN']['VALUE'] ?: 'Программа эротического массажа' ?></a>
 								</div>
 							</div>
 						</div>
