@@ -31,7 +31,7 @@ IncludeTemplateLangFile(__FILE__);
         $asset->addString('<script src="https://api-maps.yandex.ru/2.1/?apikey=613b8b9b-619b-4e88-88da-82b9980c3fee&lang=ru_RU&_v=20220224231012"
         type="text/javascript"></script>');
     endif;
-
+    $asset->addString('<link rel="canonical" href="'. getCanonical() . '">');
     $APPLICATION->ShowHead();
     ?>
     <script>

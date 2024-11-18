@@ -31,6 +31,25 @@ function addPropProgramms()
                 $ibp = new CIBlockProperty;
                 $PropID = $ibp->Add($arFields);
             }
+
+            $codeProp = 'OTHER_ARTICLES';
+            $prop = CIBlockProperty::GetList([], ['CODE' => $codeProp, 'IBLOCK_ID' => $iblock_id])->Fetch();
+            if (!$prop) {
+                $iblock_articles_id = CIBlock::GetList([], ['=CODE' => 'articles'])->Fetch()['ID'];
+                $arFields = [
+                    "NAME" => "Другие популярные услуги",
+                    "ACTIVE" => "Y",
+                    "SORT" => "500",
+                    "CODE" => $codeProp,
+                    "PROPERTY_TYPE" => 'E',
+                    "IBLOCK_ID" => $iblock_id,
+                    "LINK_IBLOCK_ID" => $iblock_articles_id,
+                    'MULTIPLE' => 'Y'
+                ];
+
+                $ibp = new CIBlockProperty;
+                $PropID = $ibp->Add($arFields);
+            }
         }
     } catch (\Throwable $th) {
     }
@@ -66,9 +85,16 @@ function addPropArticles()
     }
 }
 
-function changeDetailPageURLArticle() {
+function changeDetailPageURLArticle()
+{
     try {
-        $iblock_id = CIBlock::GetList([], ['=CODE' => 'articles'])->Fetch()['ID'];
+        if ($iblock_id = CIBlock::GetList([], ['=CODE' => 'articles'])->Fetch()['ID']) {
+            $ib = new CIBlock;
+            $arFields = [
+                'DETAIL_PAGE_URL' => '#SITE_DIR#/#IBLOCK_CODE#/#ELEMENT_CODE#/'
+            ];
+            $ib->Update($iblock_id, $arFields);
+        }
     } catch (\Throwable $th) {
         //throw $th;
     }
@@ -76,3 +102,4 @@ function changeDetailPageURLArticle() {
 
 addPropProgramms();
 addPropArticles();
+changeDetailPageURLArticle();
