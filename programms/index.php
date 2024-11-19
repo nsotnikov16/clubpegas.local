@@ -199,6 +199,19 @@ while ($section = $sections->GetNext()) {
         </div>
     </div>
 </section>
+<section class="section">
+	<div class="page__container">
+		<div class="content">
+			<? $APPLICATION->IncludeComponent(
+				"bitrix:main.include",
+				"",
+				array(
+					"AREA_FILE_SHOW" => "file",
+					'PATH' => SITE_DIR . 'include/programms/bottom-text.php'
+				)
+			); ?>
+		</div></div>
+</section>
 <script>
     const titlePage = document.querySelector('.page__title')
     if (titlePage) {

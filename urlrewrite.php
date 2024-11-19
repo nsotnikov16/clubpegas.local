@@ -18,7 +18,7 @@ $arUrlRewrite=array (
   ),
   1 => 
   array (
-    'CONDITION' => '#^/(.*)/\\?*(.*?)$#',
+    'CONDITION' => '#^/articles/(.*)/\\?*(.*?)$#',
     'RULE' => 'ELEMENT_CODE=$1',
     'ID' => '',
     'PATH' => '/articles/detail.php',

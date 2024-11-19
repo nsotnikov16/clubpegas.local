@@ -1,0 +1,34 @@
+.popular {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.popular__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.popular__item-link {
+    padding: 10px 16px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    background: white;
+    font-weight: 500;
+}
+
+.popular {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+@media(max-width: 767px) {
+    .popular__item-link {
+        padding: 8px 12px;
+    }
+}
