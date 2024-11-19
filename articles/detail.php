@@ -80,13 +80,14 @@ CHTTP::SetStatus("404 Not Found");
 	false
 ); ?> 
 <? 
+    $GLOBALS['filterOtherArticles'] = ['!ID' => $element['ID']];
     $otherArticles = [];
     $db_res = CIBlockElement::GetProperty($element['IBLOCK_ID'], $element['ID'], 'sort', 'asc', ['CODE' => 'OTHER_ARTICLES']);
     while ($arr = $db_res->Fetch()) {
         $otherArticles[] = $arr['VALUE'];
     };
 
-    if (!empty($otherArticles)) $GLOBALS['filterOtherArticles'] = ['ID' => $otherArticles];
+    if (!empty($otherArticles)) $GLOBALS['filterOtherArticles']['ID'] = $otherArticles;
 
     $APPLICATION->IncludeComponent(
         "bitrix:news.list",
